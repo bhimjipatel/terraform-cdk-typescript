@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`multiple stacks CLI-driven workflow synth 1`] = `
+"{
+  "//": {
+    "metadata": {
+      "backend": "local",
+      "stackName": "first",
+      "version": "stubbed"
+    },
+    "outputs": {
+      "first": {
+        "output": "output"
+      }
+    }
+  },
+  "output": {
+    "output": {
+      "value": "first"
+    }
+  },
+  "provider": {
+    "null": [
+      {}
+    ]
+  },
+  "resource": {
+    "null_resource": {
+      "test": {
+        "//": {
+          "metadata": {
+            "path": "first/test",
+            "uniqueId": "test"
+          }
+        },
+        "provisioner": [
+          {
+            "local-exec": {
+              "command": "echo \\"hello deploy\\""
+            }
+          }
+        ]
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "local": {
+        "path": "terraform.tfstate"
+      }
+    },
+    "required_providers": {
+      "null": {
+        "source": "null",
+        "version": "3.1.1"
+      }
+    }
+  }
+}"
+`;
+
+exports[`multiple stacks CLI-driven workflow synth 2`] = `
+"{
+  "//": {
+    "metadata": {
+      "backend": "local",
+      "stackName": "second",
+      "version": "stubbed"
+    },
+    "outputs": {
+      "second": {
+        "output": "output"
+      }
+    }
+  },
+  "output": {
+    "output": {
+      "value": "second"
+    }
+  },
+  "provider": {
+    "null": [
+      {}
+    ]
+  },
+  "resource": {
+    "null_resource": {
+      "test": {
+        "//": {
+          "metadata": {
+            "path": "second/test",
+            "uniqueId": "test"
+          }
+        },
+        "provisioner": [
+          {
+            "local-exec": {
+              "command": "echo \\"hello deploy\\""
+            }
+          }
+        ]
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "local": {
+        "path": "terraform.tfstate"
+      }
+    },
+    "required_providers": {
+      "null": {
+        "source": "null",
+        "version": "3.1.1"
+      }
+    }
+  }
+}"
+`;

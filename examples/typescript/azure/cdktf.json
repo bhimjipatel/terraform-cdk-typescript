@@ -1,0 +1,7 @@
+{
+  "language": "typescript",
+  "app": "npx ts-node main.ts",
+  "terraformProviders": [
+    "azurerm@~> 2.0.0"
+  ]
+}
